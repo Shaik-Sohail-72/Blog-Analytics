@@ -3,8 +3,11 @@ const axios = require('axios');
 const _ = require('lodash');
 require('dotenv').config();
 
+var cors = require('cors');
 
 const app = express();
+app.use(cors());
+
 const PORT = process.env.PORT || 5000;
 
 const data = async () => {
